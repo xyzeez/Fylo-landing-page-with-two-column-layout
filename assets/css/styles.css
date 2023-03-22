@@ -816,11 +816,6 @@ footer {
     margin-top: 0;
   }
 }
-@media screen and (min-width: 87.5rem) {
-  .social-media {
-    max-width: 19rem;
-  }
-}
 
 .header__logo {
   transition: all 0.5s ease;

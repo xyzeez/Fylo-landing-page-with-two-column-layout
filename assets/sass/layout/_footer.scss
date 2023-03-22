@@ -214,9 +214,5 @@ footer {
         justify-content: flex-start;
         max-width: 12rem;
         margin-top: 0;
-    }
-
-    @include breakpoint (desktop-xl) {
-        max-width: 19rem;
-    }    
+    }   
 }
