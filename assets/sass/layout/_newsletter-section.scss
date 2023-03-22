@@ -1,0 +1,119 @@
+@use '../global' as *;
+@use '../components' as *;
+
+.newsletter {
+    @include flex;
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    background-color: $theme-ashe-blue;
+
+    &__container {
+        @include flex;
+        width: 100%;
+        max-width: 90rem;
+        gap: 1.5rem;
+        text-align: center;
+        color: $theme-white;
+    }
+
+    &__title {
+        font: $theme-subheader-style;
+        margin-bottom: 1.5rem;
+    }
+
+    &__paragraph {
+        font: $theme-paragraph-style;
+        width: 100%;
+        max-width: 50ch;
+    }
+
+    &__form {
+        font-family: $theme-paragraph-font;
+
+        &-email, &-btn {
+            width: 100%;
+            height: 3rem;     
+            border: 0.063rem solid $theme-dark-blue;
+            border-radius: 0.3rem;
+        }
+
+        &-email {
+            padding: 0.875rem;
+            
+            &::placeholder {
+                font-size: 12px;
+                color: $theme-light-gray;
+                line-height: normal;
+            }
+
+            &:focus {
+                border-color: $theme-bright-blue;
+            }
+        }
+
+        &-btn {
+            font: $theme-paragraph-style;
+            height: 3rem;
+            margin: 0.8rem 0;
+            border: none;
+            background-color: $theme-bright-blue;
+
+        }
+    }
+
+    @include breakpoint (tablet) {
+        padding: 6.5rem 3rem 5.35rem;
+
+        &__container {
+            flex-direction: row;
+            text-align: left;
+            justify-content: flex-start;
+            gap: 8rem;
+        }
+
+        &__content {
+            width: 50%;
+        }
+
+        &__title {
+            font-size: 2.031rem;
+        }
+
+        &__paragraph {
+            max-width: 55ch;
+            font-size: 1.15rem;
+        }
+
+        &__form {
+            width: 41%;
+        }
+    }
+
+    @include breakpoint (tablet-xl) {
+        padding: 6.5rem 4rem 5.35rem;
+
+        &__container {
+            gap: 12rem;
+        }
+
+        &__form {
+
+            &-email {
+                max-width: 92%;
+            }
+
+            &-btn {
+                max-width: 12.5rem;
+            }
+        }
+    }
+
+    @include breakpoint (desktop) {
+        padding: 6.5rem 5rem 5.35rem;
+
+        &__container {
+            gap: 14.5rem;
+            padding-inline: 5rem;
+        }
+    }
+}

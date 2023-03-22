@@ -1,0 +1,159 @@
+@use '../global' as *;
+@use '../components' as *;
+
+//hover-states
+.header {
+    &__logo {
+        transition: all 0.5s ease;
+    }
+
+    &__nav-listitem {
+        transition: all 0.5s ease;
+    }
+
+    @include hover {
+        &__logo:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+        }
+
+        &__nav-listitem:hover {
+            cursor: pointer;
+            color: $theme-bright-blue;
+        }
+    }
+}
+
+.hero__form, .newsletter__form {
+
+    &-btn {
+        position: relative;
+        transition: all 0.5s ease-out;
+    }
+
+    &-btn::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: $theme-light-white;
+        opacity: 0.2;
+        transition: all 0.3s ease-out;
+        transform: translateX(-100%);
+    }
+
+    @include hover {
+        &-btn:hover {
+            &::before {
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+
+.testimonial {
+
+    &__btn {
+        transition: all 0.5s ease;
+        @include hover {
+            &:hover {
+                color: $theme-dark-cyan;
+                border-color: $theme-dark-cyan;
+                gap: 0.8rem;
+            }
+        }   
+    }
+}
+
+.address {
+    &__number, &__email {
+        transition: all 0.5s ease;
+
+        @include hover {
+            &:hover {
+                color: $theme-bright-blue;
+            }
+        }
+    }
+}
+
+.footer__nav-item {
+    transition: all 0.5s ease;
+    
+    @include hover {
+        &:hover {
+            color: $theme-bright-blue;
+        }
+    }
+}
+
+.social-media {
+    &__link {
+        transition: all 0.5s ease;
+
+        @include hover {
+            &:hover {
+                transform: scale(1.1);
+                border-color: $theme-bright-blue;
+                background-color: $theme-bright-blue;
+            }
+        }
+    }
+}
+
+//Entrance-Animation
+body {
+    animation: body-entrance 3s;
+}
+
+@keyframes body-entrance {
+    0% {
+        overflow: hidden;
+    }
+}
+
+header {
+    animation: header-entrance 1.5s ease;
+}
+
+@keyframes header-entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.hero {
+
+    &__image {
+        animation: hero-image-entrance 1s ease;
+    }
+
+    &__content {
+        animation: hero-content-entrance 1s ease;
+    }
+}
+
+@keyframes hero-content-entrance {
+    0% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes hero-image-entrance {
+    0% {
+        transform: translateX(100%) scaleX(0);
+    }
+}
+
+//Disable Animation
+@media (prefers-reduced-motion) {
+    body,
+    header,
+    .hero__content, 
+    .hero__image {
+        animation-play-state: paused;
+    }
+}

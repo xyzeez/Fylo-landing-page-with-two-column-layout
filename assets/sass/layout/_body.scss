@@ -1,0 +1,41 @@
+@use '../global' as *;
+@use '../components' as *;
+
+body {
+    position: relative;
+    @include flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $theme-white;
+}
+
+main {
+    @include flex;
+    width: 100%;
+}
+
+body {
+    scrollbar-color: $theme-ashe-blue $theme-light-white;
+
+    &::-webkit-scrollbar {
+        width: 0.625rem; 
+        height: 0.625rem;
+    }
+
+    &::-webkit-scrollbar-thumb { 
+        background-color: $theme-ashe-blue;
+        border: 1px solid $theme-light-white;
+        border-radius: 1.25rem;
+
+        @include hover {
+            &:hover {
+                background-color: $theme-light-ashe-blue;
+            }
+        }
+    }
+
+    &::-webkit-scrollbar-track { 
+        background: $theme-light-white;
+    }
+}
+  

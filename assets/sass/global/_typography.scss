@@ -1,0 +1,12 @@
+//font-families
+$theme-header-font: 'Raleway', sans-serif;
+$theme-paragraph-font: 'Open Sans', sans-serif;
+
+//font-weights
+$normal: 400;
+$bold: 700;
+
+//theme-font-styles
+$theme-header-style: $bold clamp(1.6rem, 3.5vw, 2.51rem) $theme-header-font;
+$theme-subheader-style: $bold clamp(1.1rem, 3.5vw, 2.54rem) $theme-header-font;
+$theme-paragraph-style: $normal clamp(1rem, 3.5vw, 1.13rem) $theme-paragraph-font;
