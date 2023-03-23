@@ -44,6 +44,8 @@ This is a solution to the [Fylo landing page with two column layout challenge on
 ### Useful resources
 
 - [The Current State of Styling Scrollbars in CSS](https://css-tricks.com/the-current-state-of-styling-scrollbars-in-css/)
+- [Most sites have a skip-to-main link, and yours should too! | Youtube - Kelvin Powell](https://www.youtube.com/watch?v=jDDaOFr9nqQ)
+- [The problem with multiple nav elements (and the simple solution) | Youtube - Kelvin Powell](https://www.youtube.com/watch?v=I1lq2ge7g4g)
 
 ## Author
 
