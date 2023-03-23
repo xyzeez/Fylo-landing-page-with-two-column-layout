@@ -10,7 +10,6 @@ header {
     width: 100%;
     max-width: 90rem;
     padding: 1.3rem 1rem;
-
     @include breakpoint (tablet) {
         padding: 2rem 3rem;
     }

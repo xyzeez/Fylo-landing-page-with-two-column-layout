@@ -10,6 +10,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   min-height: 100%;
 }
@@ -100,6 +104,20 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: hsl(0, 0%, 100%);
+}
+
+#skip-nav-link {
+  position: absolute;
+  top: 0.3rem;
+  left: 0;
+  padding: 1rem;
+  border-radius: 0 0.3rem 0.3rem 0;
+  background-color: hsl(224, 93%, 58%);
+  transform: translateX(-120%);
+  transition: all 250ms linear;
+}
+#skip-nav-link:focus {
+  transform: translateX(0%);
 }
 
 main {
