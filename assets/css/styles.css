@@ -155,6 +155,7 @@ header {
   width: 100%;
   max-width: 90rem;
   padding: 1.3rem 1rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 48rem) {
   header {

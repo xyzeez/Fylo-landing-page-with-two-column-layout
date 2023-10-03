@@ -2,75 +2,76 @@
 @use '../components' as *;
 
 header {
-    position: absolute;
-    top: 0;
-    @include flex (row, $justify: space-between);
-    gap: 1rem;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 90rem;
-    padding: 1.3rem 1rem;
-    @include breakpoint (tablet) {
-        padding: 2rem 3rem;
-    }
+  position: absolute;
+  top: 0;
+  @include flex(row, $justify: space-between);
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 90rem;
+  padding: 1.3rem 1rem;
+  overflow: hidden;
 
-    @include breakpoint (tablet-xl) {
-        padding: 3rem 4rem;
-    }
+  @include breakpoint(tablet) {
+    padding: 2rem 3rem;
+  }
 
-    @include breakpoint (desktop) {
-        padding: 4rem 5rem;
-    }
+  @include breakpoint(tablet-xl) {
+    padding: 3rem 4rem;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 4rem 5rem;
+  }
 }
 
 .header {
+  &__logo {
+    max-width: 6rem;
+    flex-basis: 1;
+  }
 
+  &__nav-list {
+    @include flex(row);
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    flex-basis: 1;
+    font: {
+      family: $theme-header-font;
+      size: clamp(0.9rem, 3.5vw, 1.13rem);
+      weight: $normal;
+    }
+    color: $theme-dark-blue;
+  }
+
+  @include breakpoint(tablet) {
     &__logo {
-        max-width: 6rem;
-        flex-basis: 1;
+      max-width: 7.5rem;
     }
 
     &__nav-list {
-        @include flex (row);
-        flex-wrap: wrap;
-        gap: 1rem;
-        width: 100%;
-        flex-basis: 1;
-        font: {
-            family: $theme-header-font;
-            size: clamp(0.9rem, 3.5vw, 1.13rem);
-            weight: $normal;
-        }
-        color: $theme-dark-blue;
+      gap: 2rem;
+    }
+  }
+
+  @include breakpoint(tablet-xl) {
+    &__logo {
+      max-width: 8.5rem;
     }
 
-    @include breakpoint (tablet) {
-        &__logo {
-            max-width: 7.5rem;
-        }
+    &__nav-list {
+      gap: 3rem;
+    }
+  }
 
-        &__nav-list {
-            gap: 2rem;
-        }
+  @include breakpoint(desktop) {
+    &__logo {
+      max-width: 10.375rem;
     }
 
-    @include breakpoint (tablet-xl) {
-        &__logo {
-            max-width: 8.5rem;
-        }
-
-        &__nav-list {
-            gap: 3rem;
-        }
+    &__nav-list {
+      gap: 3.6rem;
     }
-
-    @include breakpoint (desktop) {
-        &__logo {
-            max-width: 10.375rem;
-        }
-
-        &__nav-list {
-            gap: 3.6rem;
-        }
-    }
+  }
 }
